@@ -4,6 +4,8 @@ Rubricks explores how expert judgment can be structured into reusable review sta
 
 This public repository contains non-proprietary materials related to selected Rubricks use cases.
 
+public website is: rubricks.ai
+
 ## Use Cases
 
 | Use Case | Status | Contents |
