@@ -1,0 +1,175 @@
+{
+  "sample_id": "brightcart_summary_review",
+  "sample_name": "BrightCart — Customer Interview Summary Review",
+  "rubrick_name": "Customer Interview Summary Review",
+  "persona": {
+    "name": "Laura Bennett",
+    "role": "Independent Product & Operations Consultant",
+    "usage_pattern": "Uses ChatGPT to summarize customer interviews, discovery notes, and client documents."
+  },
+  "work_type": "Summaries",
+  "review_item_type": "AI-generated customer interview summary",
+  "source_mode": "pasted_ai_output",
+  "creation_inputs": {
+    "minimum_input": "Expert guided Q&A answers",
+    "optional_inputs": [
+      "reference documents",
+      "review context",
+      "real examples",
+      "synthetic starter cases"
+    ],
+    "notes": "This sample demonstrates that Rubricks can start from expert answers and does not require polished reference documents or real examples at setup."
+  },
+  "rubrick_entries": [
+    {
+      "id": "evidence_backed_claims",
+      "title": "Claims must be evidence-backed",
+      "source_type": "expert_q_and_a",
+      "guidance": "Any important customer claim, pain point, or product recommendation should be supported by a quote, transcript detail, source evidence, or clearly marked as inference.",
+      "applies_to": ["Executive Summary", "Product Opportunity", "Recommended Next Steps"]
+    },
+    {
+      "id": "do_not_overstate_demand",
+      "title": "Do not overstate demand",
+      "source_type": "expert_q_and_a",
+      "guidance": "Do not convert one customer's interest into broad demand or roadmap priority unless supported by multiple examples or prior research.",
+      "applies_to": ["Executive Summary", "Product Opportunity"]
+    },
+    {
+      "id": "preserve_objections",
+      "title": "Preserve objections and hesitation",
+      "source_type": "expert_q_and_a",
+      "guidance": "Customer hesitation, concerns, constraints, and objections should be included and not softened into generic positivity.",
+      "applies_to": ["Customer Pain Points", "Product Opportunity"]
+    },
+    {
+      "id": "separate_fact_inference_recommendation",
+      "title": "Separate facts, interpretation, and recommendation",
+      "source_type": "summary_quality_standard",
+      "guidance": "The summary should distinguish between what the customer said, what the reviewer inferred, and what the product team may do next.",
+      "applies_to": ["Executive Summary", "Recommended Next Steps"]
+    },
+    {
+      "id": "actionable_next_steps",
+      "title": "Next steps must be actionable",
+      "source_type": "ai_summary_review_checklist",
+      "guidance": "Next steps should be specific, proportional to the evidence, and oriented around validation when confidence is limited.",
+      "applies_to": ["Recommended Next Steps"]
+    },
+    {
+      "id": "include_uncertainty",
+      "title": "Include uncertainty where evidence is limited",
+      "source_type": "expert_q_and_a",
+      "guidance": "If conclusions are based on a single interview or incomplete evidence, the summary should include a confidence level or limitation.",
+      "applies_to": ["Executive Summary", "Product Opportunity"]
+    }
+  ],
+  "work_artifacts": [
+    {
+      "id": "pasted_ai_summary",
+      "file": "work_to_review/pasted_ai_summary.md",
+      "title": "AI-Generated Customer Interview Summary",
+      "source_label": "Pasted AI output",
+      "contains_multiple_review_items": true,
+      "review_items": [
+        {
+          "id": "executive_summary",
+          "title": "Executive Summary",
+          "rubrick_result": "needs_edit",
+          "recommended_action": "Reduce overclaiming and add uncertainty",
+          "matched_rubrick_entries": ["evidence_backed_claims", "do_not_overstate_demand", "include_uncertainty"],
+          "confidence": "high",
+          "source_document": "pasted_ai_summary.md",
+          "relevant_context": ["interview_goal.md", "prior_research_themes.md"],
+          "relevant_reference": ["expert_q_and_a_seed.md", "summary_quality_standard.md"],
+          "suggested_edit": "Replace broad demand language with a narrower statement: the customer expressed interest in alerts but raised concerns about data freshness and alert fatigue. Add confidence: Medium, based on one interview."
+        },
+        {
+          "id": "customer_pain_points",
+          "title": "Customer Pain Points",
+          "rubrick_result": "partially_ready",
+          "recommended_action": "Add evidence and preserve constraints",
+          "matched_rubrick_entries": ["evidence_backed_claims", "preserve_objections"],
+          "confidence": "medium",
+          "source_document": "pasted_ai_summary.md",
+          "relevant_context": ["customer_profile.md"],
+          "relevant_reference": ["ai_summary_review_checklist.md"],
+          "suggested_edit": "Add the customer's concern that alerts will be ignored if they are not based on current data, and include the need for configurable thresholds."
+        },
+        {
+          "id": "product_opportunity",
+          "title": "Product Opportunity",
+          "rubrick_result": "needs_edit",
+          "recommended_action": "Separate interest from validated demand",
+          "matched_rubrick_entries": ["do_not_overstate_demand", "preserve_objections", "separate_fact_inference_recommendation"],
+          "confidence": "high",
+          "source_document": "pasted_ai_summary.md",
+          "relevant_context": ["prior_research_themes.md", "brightcart_product_context.md"],
+          "relevant_reference": ["summary_quality_standard.md"],
+          "suggested_edit": "State that Smart Inventory Alerts are a promising area for further validation, not a confirmed roadmap priority."
+        },
+        {
+          "id": "recommended_next_steps",
+          "title": "Recommended Next Steps",
+          "rubrick_result": "needs_edit",
+          "recommended_action": "Make next steps validation-oriented",
+          "matched_rubrick_entries": ["actionable_next_steps", "include_uncertainty"],
+          "confidence": "high",
+          "source_document": "pasted_ai_summary.md",
+          "relevant_context": ["interview_goal.md"],
+          "relevant_reference": ["ai_summary_review_checklist.md"],
+          "suggested_edit": "Recommend testing alert explanations with 3–5 similar users before committing to Q3 roadmap scope. Avoid recommending automated reorder suggestions until trust and approval requirements are validated."
+        }
+      ]
+    }
+  ],
+  "starter_cases": [
+    {
+      "id": "starter_overstates_demand",
+      "title": "AI summary overstates customer demand",
+      "example_summary": "The customer is highly interested and ready to move forward next quarter, with strong demand across teams.",
+      "ai_draft_review": "Claims must be evidence-backed; demand is overstated.",
+      "recommended_reaction": "needs_nuance"
+    },
+    {
+      "id": "starter_misses_objection",
+      "title": "Summary misses customer objection",
+      "example_summary": "The client responded positively to the proposal and is open to the recommended rollout plan.",
+      "ai_draft_review": "Preserve hesitation and constraints; key objection is missing.",
+      "recommended_reaction": "needs_nuance"
+    },
+    {
+      "id": "starter_actionability_gap",
+      "title": "Recommendation lacks next-step owner",
+      "example_summary": "The best next step is to follow up and move the opportunity ahead after internal review.",
+      "ai_draft_review": "Actionability gap; next-step owner is unclear.",
+      "recommended_reaction": "keep"
+    }
+  ],
+  "enriched_outputs": {
+    "summary_status": "needs_edit",
+    "overall_recommendation": "Revise before sharing with client team",
+    "suggested_work_items": [
+      {
+        "id": "validate_alert_fatigue",
+        "title": "Validate alert fatigue concern",
+        "description": "Ask 3–5 similar customers what makes alerts trustworthy versus noisy."
+      },
+      {
+        "id": "prototype_alert_explanation",
+        "title": "Prototype alert explanation logic",
+        "description": "Test whether showing current stock, sales velocity, supplier lead time, and promotion context improves trust."
+      }
+    ],
+    "export_ready_fields": [
+      "review_item_id",
+      "rubrick_result",
+      "recommended_action",
+      "matched_rubrick_entries",
+      "confidence",
+      "suggested_edit",
+      "relevant_context",
+      "relevant_references"
+    ]
+  }
+}

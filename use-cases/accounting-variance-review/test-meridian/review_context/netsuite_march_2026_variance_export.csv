@@ -1,0 +1,6 @@
+review_item_id,account,department,march_actual,march_budget,variance_dollar,variance_percent,february_actual,march_forecast,prior_year_march_actual,status
+item-office-supplies,6400 Office Supplies,Design / Admin,24900,6500,18400,283.1,5800,7000,6200,Open
+item-marketing,6200 Marketing & Advertising,Marketing,167500,120000,47500,39.6,118400,155000,132000,Open
+item-software,6600 Software Subscriptions,Corporate,38200,14500,23700,163.4,14200,15000,13900,Open
+item-inbound-freight,5100 Inbound Freight,Operations,58200,42500,15700,36.9,43900,44000,41100,Open
+item-legal,7100 Legal & Professional Fees,Corporate,31200,18000,13200,73.3,17100,18500,16400,Open

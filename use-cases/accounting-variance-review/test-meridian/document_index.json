@@ -1,0 +1,436 @@
+{
+  "documents": [
+    {
+      "id": "meridian-accounting-policy",
+      "title": "Meridian Accounting Policy",
+      "filePath": "public/samples/meridian/references/meridian_accounting_policy.md",
+      "folder": "references",
+      "documentRole": "reference_document",
+      "documentType": "policy",
+      "description": "High-level monthly close and variance review policy.",
+      "linkedRubrickIds": [
+        "meridian-monthly-variance-review"
+      ],
+      "linkedWorkItemIds": [],
+      "linkedExampleIds": [],
+      "linkedGuidanceIds": [
+        "guidance-material-variance-threshold",
+        "guidance-explanation-supported"
+      ],
+      "factsProvided": [
+        "materiality_threshold",
+        "sensitive_account_threshold",
+        "close_review_expectations"
+      ]
+    },
+    {
+      "id": "capitalization-policy",
+      "title": "Capitalization Policy",
+      "filePath": "public/samples/meridian/references/capitalization_policy.md",
+      "folder": "references",
+      "documentRole": "reference_document",
+      "documentType": "policy",
+      "description": "Defines capitalization threshold and fixed asset review requirements.",
+      "linkedRubrickIds": [
+        "meridian-monthly-variance-review"
+      ],
+      "linkedWorkItemIds": [
+        "item-office-supplies"
+      ],
+      "linkedExampleIds": [
+        "review-office-supplies"
+      ],
+      "linkedGuidanceIds": [
+        "guidance-office-supplies-capitalization"
+      ],
+      "factsProvided": [
+        "capitalization_threshold"
+      ]
+    },
+    {
+      "id": "month-end-close-checklist",
+      "title": "Month-End Close Checklist",
+      "filePath": "public/samples/meridian/references/month_end_close_checklist.md",
+      "folder": "references",
+      "documentRole": "reference_document",
+      "documentType": "checklist",
+      "description": "Operational checklist for monthly close and CFO package readiness.",
+      "linkedRubrickIds": [
+        "meridian-monthly-variance-review"
+      ],
+      "linkedWorkItemIds": [
+        "item-office-supplies",
+        "item-software",
+        "item-legal"
+      ],
+      "linkedExampleIds": [
+        "review-office-supplies",
+        "review-software",
+        "review-legal"
+      ],
+      "linkedGuidanceIds": [
+        "guidance-material-variance-threshold",
+        "guidance-explanation-supported"
+      ],
+      "factsProvided": [
+        "close_day",
+        "cfo_package_requirements",
+        "variance_explanation_requirements"
+      ]
+    },
+    {
+      "id": "expense-coding-guide",
+      "title": "Chart of Accounts & Expense Coding Guide",
+      "filePath": "public/samples/meridian/references/chart_of_accounts_expense_coding_guide.md",
+      "folder": "references",
+      "documentRole": "reference_document",
+      "documentType": "coding_guide",
+      "description": "Expense coding guidance for common accounts and coding errors.",
+      "linkedRubrickIds": [
+        "meridian-monthly-variance-review"
+      ],
+      "linkedWorkItemIds": [
+        "item-office-supplies",
+        "item-inbound-freight"
+      ],
+      "linkedExampleIds": [
+        "review-office-supplies",
+        "review-inbound-freight"
+      ],
+      "linkedGuidanceIds": [
+        "guidance-office-supplies-capitalization",
+        "guidance-freight-miscoding"
+      ],
+      "factsProvided": [
+        "account_coding_guidance"
+      ]
+    },
+    {
+      "id": "prepaid-expense-policy",
+      "title": "Prepaid Expense Policy",
+      "filePath": "public/samples/meridian/references/prepaid_expense_policy.md",
+      "folder": "references",
+      "documentRole": "reference_document",
+      "documentType": "policy",
+      "description": "Prepaid review threshold and treatment for payments benefiting future periods.",
+      "linkedRubrickIds": [
+        "meridian-monthly-variance-review"
+      ],
+      "linkedWorkItemIds": [
+        "item-software"
+      ],
+      "linkedExampleIds": [
+        "review-software"
+      ],
+      "linkedGuidanceIds": [
+        "guidance-software-prepaid-review"
+      ],
+      "factsProvided": [
+        "prepaid_review_threshold"
+      ]
+    },
+    {
+      "id": "sensitive-accounts-guidance",
+      "title": "Sensitive Accounts Review Guidance",
+      "filePath": "public/samples/meridian/references/sensitive_accounts_guidance.md",
+      "folder": "references",
+      "documentRole": "reference_document",
+      "documentType": "policy",
+      "description": "Additional support requirements for sensitive accounts.",
+      "linkedRubrickIds": [
+        "meridian-monthly-variance-review"
+      ],
+      "linkedWorkItemIds": [
+        "item-legal"
+      ],
+      "linkedExampleIds": [
+        "review-legal"
+      ],
+      "linkedGuidanceIds": [
+        "guidance-sensitive-account-support"
+      ],
+      "factsProvided": [
+        "sensitive_account_threshold",
+        "support_requirements"
+      ]
+    },
+    {
+      "id": "preparer-variance-explanations",
+      "title": "Preparer Variance Explanations",
+      "filePath": "public/samples/meridian/work_to_review/preparer_variance_explanations.md",
+      "folder": "work_to_review",
+      "documentRole": "work_document",
+      "documentType": "variance_explanations",
+      "description": "Preparer-written explanations that Linda reviews item by item.",
+      "linkedRubrickIds": [
+        "meridian-monthly-variance-review"
+      ],
+      "reviewItemIds": [
+        "item-office-supplies",
+        "item-marketing",
+        "item-software",
+        "item-inbound-freight",
+        "item-legal"
+      ],
+      "containsReviewItems": true
+    },
+    {
+      "id": "march-2026-variance-review-packet",
+      "title": "March 2026 Variance Review Packet",
+      "filePath": "public/samples/meridian/work_to_review/march_2026_variance_review_packet.md",
+      "folder": "work_to_review",
+      "documentRole": "work_document",
+      "documentType": "review_packet",
+      "description": "Draft March 2026 variance review packet for Controller review.",
+      "linkedRubrickIds": [
+        "meridian-monthly-variance-review"
+      ],
+      "reviewItemIds": [
+        "item-office-supplies",
+        "item-marketing",
+        "item-software",
+        "item-inbound-freight",
+        "item-legal"
+      ],
+      "containsReviewItems": true
+    },
+    {
+      "id": "netsuite-march-2026-variance-export",
+      "title": "NetSuite March 2026 Variance Export",
+      "filePath": "public/samples/meridian/review_context/netsuite_march_2026_variance_export.csv",
+      "folder": "review_context",
+      "documentRole": "context_source",
+      "documentType": "erp_export",
+      "contextType": "current_period",
+      "period": "2026-03",
+      "sourceSystem": "NetSuite",
+      "description": "March actuals, budget, forecast, prior month, prior year, and variance amounts.",
+      "linkedRubrickIds": [
+        "meridian-monthly-variance-review"
+      ],
+      "linkedWorkItemIds": [
+        "item-office-supplies",
+        "item-marketing",
+        "item-software",
+        "item-inbound-freight",
+        "item-legal"
+      ],
+      "factsProvided": [
+        "actuals",
+        "budget",
+        "variance_amount",
+        "variance_percent",
+        "forecast",
+        "prior_month",
+        "prior_year"
+      ]
+    },
+    {
+      "id": "netsuite-march-2026-transaction-detail",
+      "title": "NetSuite March 2026 Transaction Detail",
+      "filePath": "public/samples/meridian/review_context/netsuite_march_2026_transaction_detail.csv",
+      "folder": "review_context",
+      "documentRole": "context_source",
+      "documentType": "erp_detail",
+      "contextType": "transaction_detail",
+      "period": "2026-03",
+      "sourceSystem": "NetSuite",
+      "description": "Vendor-level transaction detail supporting March variances.",
+      "linkedRubrickIds": [
+        "meridian-monthly-variance-review"
+      ],
+      "linkedWorkItemIds": [
+        "item-office-supplies",
+        "item-marketing",
+        "item-software",
+        "item-inbound-freight",
+        "item-legal"
+      ],
+      "factsProvided": [
+        "vendor",
+        "amount",
+        "account_coding",
+        "invoice_date",
+        "potential_issue"
+      ]
+    },
+    {
+      "id": "blackline-march-2026-support-status",
+      "title": "BlackLine March 2026 Support Status",
+      "filePath": "public/samples/meridian/review_context/blackline_march_2026_support_status.csv",
+      "folder": "review_context",
+      "documentRole": "context_source",
+      "documentType": "close_support",
+      "contextType": "support_status",
+      "period": "2026-03",
+      "sourceSystem": "BlackLine",
+      "description": "Support status for March variance review items.",
+      "linkedRubrickIds": [
+        "meridian-monthly-variance-review"
+      ],
+      "linkedWorkItemIds": [
+        "item-office-supplies",
+        "item-marketing",
+        "item-software",
+        "item-inbound-freight",
+        "item-legal"
+      ],
+      "factsProvided": [
+        "support_status",
+        "missing_support",
+        "reclass_status"
+      ]
+    },
+    {
+      "id": "billcom-march-2026-ap-invoice-summary",
+      "title": "Bill.com March 2026 AP Invoice Summary",
+      "filePath": "public/samples/meridian/review_context/billcom_march_2026_ap_invoice_summary.csv",
+      "folder": "review_context",
+      "documentRole": "context_source",
+      "documentType": "ap_invoice_summary",
+      "contextType": "invoice_detail",
+      "period": "2026-03",
+      "sourceSystem": "Bill.com",
+      "description": "AP invoice summary for selected March transactions.",
+      "linkedRubrickIds": [
+        "meridian-monthly-variance-review"
+      ],
+      "linkedWorkItemIds": [
+        "item-office-supplies",
+        "item-software",
+        "item-inbound-freight",
+        "item-legal"
+      ],
+      "factsProvided": [
+        "invoice_detail",
+        "invoice_status",
+        "vendor",
+        "amount"
+      ]
+    },
+    {
+      "id": "march-2026-close-calendar",
+      "title": "March 2026 Close Calendar",
+      "filePath": "public/samples/meridian/review_context/march_2026_close_calendar.md",
+      "folder": "review_context",
+      "documentRole": "context_source",
+      "documentType": "close_calendar",
+      "contextType": "close_process",
+      "period": "2026-03",
+      "sourceSystem": "BlackLine",
+      "description": "March close timeline, close day, and CFO package deadline.",
+      "linkedRubrickIds": [
+        "meridian-monthly-variance-review"
+      ],
+      "linkedWorkItemIds": [
+        "item-office-supplies",
+        "item-marketing",
+        "item-software",
+        "item-inbound-freight",
+        "item-legal"
+      ],
+      "factsProvided": [
+        "close_day",
+        "cfo_package_due",
+        "package_status"
+      ]
+    },
+    {
+      "id": "fpa-forecast-notes-march-2026",
+      "title": "FP&A Forecast Notes \u2014 March 2026",
+      "filePath": "public/samples/meridian/review_context/fpa_forecast_notes_march_2026.md",
+      "folder": "review_context",
+      "documentRole": "context_source",
+      "documentType": "forecast_notes",
+      "contextType": "planning_context",
+      "period": "2026-03",
+      "sourceSystem": "FP&A",
+      "description": "Forecast notes and business expectations for March 2026.",
+      "linkedRubrickIds": [
+        "meridian-monthly-variance-review"
+      ],
+      "linkedWorkItemIds": [
+        "item-office-supplies",
+        "item-marketing",
+        "item-software",
+        "item-inbound-freight",
+        "item-legal"
+      ],
+      "factsProvided": [
+        "forecast",
+        "business_driver_notes"
+      ]
+    },
+    {
+      "id": "netsuite-february-2026-variance-export",
+      "title": "NetSuite February 2026 Variance Export",
+      "filePath": "public/samples/meridian/review_context/netsuite_february_2026_variance_export.csv",
+      "folder": "review_context",
+      "documentRole": "context_source",
+      "documentType": "erp_export",
+      "contextType": "prior_period",
+      "period": "2026-02",
+      "sourceSystem": "NetSuite",
+      "description": "February prior-period context for March variance review.",
+      "linkedRubrickIds": [
+        "meridian-monthly-variance-review"
+      ],
+      "linkedWorkItemIds": [
+        "item-office-supplies",
+        "item-marketing",
+        "item-software",
+        "item-inbound-freight",
+        "item-legal"
+      ],
+      "factsProvided": [
+        "prior_period_actuals",
+        "prior_period_budget",
+        "prior_period_variance"
+      ]
+    },
+    {
+      "id": "netsuite-february-2026-transaction-detail",
+      "title": "NetSuite February 2026 Transaction Detail",
+      "filePath": "public/samples/meridian/review_context/netsuite_february_2026_transaction_detail.csv",
+      "folder": "review_context",
+      "documentRole": "context_source",
+      "documentType": "erp_detail",
+      "contextType": "prior_period",
+      "period": "2026-02",
+      "sourceSystem": "NetSuite",
+      "description": "February transaction detail used as prior-period comparison.",
+      "linkedRubrickIds": [
+        "meridian-monthly-variance-review"
+      ],
+      "linkedWorkItemIds": [
+        "item-office-supplies"
+      ],
+      "factsProvided": [
+        "prior_period_transaction_detail",
+        "normal_run_rate"
+      ]
+    },
+    {
+      "id": "february-2026-close-summary",
+      "title": "February 2026 Close Summary",
+      "filePath": "public/samples/meridian/review_context/february_2026_close_summary.md",
+      "folder": "review_context",
+      "documentRole": "context_source",
+      "documentType": "close_summary",
+      "contextType": "prior_period",
+      "period": "2026-02",
+      "sourceSystem": "BlackLine",
+      "description": "February close summary used as prior-period context.",
+      "linkedRubrickIds": [
+        "meridian-monthly-variance-review"
+      ],
+      "linkedWorkItemIds": [
+        "item-office-supplies"
+      ],
+      "factsProvided": [
+        "prior_period_close_status",
+        "prior_period_support_status"
+      ]
+    }
+  ]
+}

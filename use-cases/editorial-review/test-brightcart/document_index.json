@@ -1,0 +1,74 @@
+{
+  "sample_id": "brightcart_summary_review",
+  "sample_name": "BrightCart — Customer Interview Summary Review",
+  "persona": {
+    "name": "Laura Bennett",
+    "role": "Independent Product & Operations Consultant",
+    "description": "Laura frequently uses ChatGPT to summarize customer interviews, discovery notes, and client documents. She uses Rubricks to review whether AI-generated summaries are accurate, balanced, evidence-backed, and decision-ready."
+  },
+  "folder_structure": {
+    "references": [
+      {
+        "file": "expert_q_and_a_seed.md",
+        "type": "expert_q_and_a",
+        "description": "Laura's guided Q&A answers used to seed the Rubrick when no formal reference documents exist."
+      },
+      {
+        "file": "summary_quality_standard.md",
+        "type": "standard",
+        "description": "A lightweight standard defining what makes a customer interview summary ready for use."
+      },
+      {
+        "file": "ai_summary_review_checklist.md",
+        "type": "checklist",
+        "description": "Checklist for reviewing AI-generated summaries for accuracy, balance, completeness, and actionability."
+      }
+    ],
+    "review_context": [
+      {
+        "file": "brightcart_product_context.md",
+        "type": "product_context",
+        "description": "Context for BrightCart and the Smart Inventory Alerts feature."
+      },
+      {
+        "file": "interview_goal.md",
+        "type": "research_context",
+        "description": "Research questions and intended use of the interview summary."
+      },
+      {
+        "file": "customer_profile.md",
+        "type": "customer_context",
+        "description": "Profile of the interviewed customer and current workflow."
+      },
+      {
+        "file": "prior_research_themes.md",
+        "type": "prior_context",
+        "description": "Prior themes from related discovery conversations."
+      }
+    ],
+    "work_to_review": [
+      {
+        "file": "pasted_ai_summary.md",
+        "type": "work_artifact",
+        "description": "The AI-generated summary pasted by Laura for Rubricks to review.",
+        "contains_multiple_review_items": true,
+        "review_items": [
+          "Executive Summary",
+          "Customer Pain Points",
+          "Product Opportunity",
+          "Recommended Next Steps"
+        ]
+      },
+      {
+        "file": "original_interview_excerpt.md",
+        "type": "supporting_artifact",
+        "description": "Optional original interview excerpt for evidence checking."
+      },
+      {
+        "file": "revised_summary_expected.md",
+        "type": "expected_output",
+        "description": "A stronger revised summary direction after Rubricks review."
+      }
+    ]
+  }
+}

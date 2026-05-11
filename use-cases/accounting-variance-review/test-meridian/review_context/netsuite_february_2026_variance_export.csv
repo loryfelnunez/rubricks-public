@@ -1,0 +1,6 @@
+review_item_id,account,department,february_actual,february_budget,variance_dollar,variance_percent,status
+item-office-supplies,6400 Office Supplies,Design / Admin,5800,6200,-400,-6.5,Closed
+item-marketing,6200 Marketing & Advertising,Marketing,118400,115000,3400,3.0,Closed
+item-software,6600 Software Subscriptions,Corporate,14200,14500,-300,-2.1,Closed
+item-inbound-freight,5100 Inbound Freight,Operations,43900,42500,1400,3.3,Closed
+item-legal,7100 Legal & Professional Fees,Corporate,17100,18000,-900,-5.0,Closed

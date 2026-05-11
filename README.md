@@ -12,6 +12,7 @@ public website is: rubricks.ai
 |---|---|---|
 | Accounting Variance Review | Use Case in DEV | README + synthetic work items, context, and policies |
 | Accounting Memo | Concept note | README |
+| Editorial Review | Use Case in DEV | README + BrightCart sample with review context, references, and work to review |
 | Immigrant Voices | Hackathon prototype | README + link to prototype repo |
 | Car Parts Recommendation | Use Case In DEV | README + API/scraping notes + synthetic examples |
 

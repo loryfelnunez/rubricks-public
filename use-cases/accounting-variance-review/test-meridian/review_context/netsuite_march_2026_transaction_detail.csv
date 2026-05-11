@@ -1,0 +1,15 @@
+review_item_id,transaction_id,vendor,description,amount,current_account,department,invoice_attached,invoice_date,potential_issue
+item-office-supplies,txn-office-1,Apple Store Business,MacBook Pros for design team,14200,6400 Office Supplies,Design,true,2026-03-18,Durable equipment may require capitalization review.
+item-office-supplies,txn-office-2,OfficeHub,Desk supplies and printer toner,2900,6400 Office Supplies,Admin,true,2026-03-07,
+item-office-supplies,txn-office-3,OfficeHub,Design supplies,1800,6400 Office Supplies,Design,true,2026-03-14,
+item-office-supplies,txn-office-4,PrintPro,Printer maintenance,1000,6400 Office Supplies,Admin,true,2026-03-22,
+item-marketing,txn-marketing-1,BrightFrame Agency,Spring campaign media placement,39500,6200 Marketing & Advertising,Marketing,true,2026-03-15,Timing explanation appears plausible but should tie to campaign tracker.
+item-marketing,txn-marketing-2,Meta Ads,Paid social media campaign,18200,6200 Marketing & Advertising,Marketing,true,2026-03-31,Cutoff should be reviewed if campaign ran across periods.
+item-marketing,txn-marketing-3,Google Ads,Search advertising,15400,6200 Marketing & Advertising,Marketing,true,2026-03-29,
+item-software,txn-software-1,DesignCloud Pro,"Annual design software renewal, Apr 2026-Mar 2027",21600,6600 Software Subscriptions,Design,true,2026-03-26,Annual renewal may require prepaid treatment.
+item-software,txn-software-2,Slack,Monthly collaboration software,4900,6600 Software Subscriptions,Corporate,true,2026-03-05,
+item-software,txn-software-3,DataLooker,Quarterly analytics platform renewal,11700,6600 Software Subscriptions,Corporate,true,2026-03-20,Quarterly renewal may need prepaid review depending benefit period.
+item-inbound-freight,txn-freight-1,Harbor Freight Logistics,Inbound freight from supplier warehouse,22600,5100 Inbound Freight,Operations,true,2026-03-17,
+item-inbound-freight,txn-freight-2,ShipFast,Ecommerce customer shipping labels,9800,5100 Inbound Freight,Ecommerce,true,2026-03-28,Customer shipping may be misclassified as inbound freight.
+item-inbound-freight,txn-freight-3,PortLine Freight,Container delivery surcharge,13200,5100 Inbound Freight,Operations,true,2026-03-12,
+item-legal,txn-legal-1,Barton & Vale LLP,Outside counsel invoice - contract dispute,13200,7100 Legal & Professional Fees,Corporate,false,2026-03-25,Sensitive account; support missing.

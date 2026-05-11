@@ -1,0 +1,666 @@
+{
+  "company": {
+    "id": "meridian-apparel",
+    "name": "Meridian Apparel, Inc.",
+    "industry": "Apparel retail",
+    "companyType": "Mid-market retail company",
+    "fiscalYearEnd": "December 31",
+    "currency": "USD",
+    "accountingSystem": "NetSuite",
+    "closeTool": "BlackLine",
+    "expenseManagement": "Ramp",
+    "apSystem": "Bill.com",
+    "reportingPackage": "CFO monthly close package"
+  },
+  "expert": {
+    "id": "linda-carter",
+    "name": "Linda Carter",
+    "role": "Senior Controller",
+    "background": "28 years across public accounting, GAAP reporting, apparel retail, and food & beverage.",
+    "expertiseAreas": [
+      "Month-end close review",
+      "Variance explanations",
+      "Account coding",
+      "Accruals and prepaids",
+      "Capitalization review",
+      "CFO package readiness"
+    ]
+  },
+  "rubrick": {
+    "id": "meridian-monthly-variance-review",
+    "title": "Meridian \u2014 Monthly Variance Review",
+    "status": "Ready",
+    "workType": "Explanations",
+    "area": "Accounting / month-end close",
+    "expertId": "linda-carter",
+    "companyId": "meridian-apparel",
+    "description": "Review whether monthly variance explanations are complete, supported, correctly classified, and ready for controller follow-up."
+  },
+  "contextRequirements": [
+    {
+      "id": "ctx-current-period",
+      "name": "Current period",
+      "fields": [
+        {
+          "id": "actuals",
+          "label": "Actuals",
+          "required": true,
+          "sourceHint": "ERP / GL"
+        },
+        {
+          "id": "budget",
+          "label": "Budget",
+          "required": true,
+          "sourceHint": "ERP / GL or FP&A"
+        },
+        {
+          "id": "variance-amount",
+          "label": "Variance amount",
+          "required": true,
+          "sourceHint": "ERP / GL"
+        },
+        {
+          "id": "variance-percent",
+          "label": "Variance percent",
+          "required": true,
+          "sourceHint": "ERP / GL"
+        }
+      ]
+    },
+    {
+      "id": "ctx-prior-period",
+      "name": "Prior period",
+      "fields": [
+        {
+          "id": "prior-month",
+          "label": "Prior month",
+          "required": true,
+          "sourceHint": "ERP / GL"
+        },
+        {
+          "id": "prior-year",
+          "label": "Prior year",
+          "required": false,
+          "sourceHint": "ERP / GL"
+        }
+      ]
+    },
+    {
+      "id": "ctx-planning",
+      "name": "Planning",
+      "fields": [
+        {
+          "id": "forecast",
+          "label": "Forecast",
+          "required": true,
+          "sourceHint": "FP&A"
+        },
+        {
+          "id": "fpa-notes",
+          "label": "FP&A notes",
+          "required": false,
+          "sourceHint": "FP&A"
+        }
+      ]
+    },
+    {
+      "id": "ctx-transactions",
+      "name": "Transactions",
+      "fields": [
+        {
+          "id": "vendor",
+          "label": "Vendor",
+          "required": true,
+          "sourceHint": "ERP / GL or AP system"
+        },
+        {
+          "id": "amount",
+          "label": "Amount",
+          "required": true,
+          "sourceHint": "ERP / GL"
+        },
+        {
+          "id": "account-coding",
+          "label": "Account coding",
+          "required": true,
+          "sourceHint": "ERP / GL"
+        },
+        {
+          "id": "invoice-date",
+          "label": "Invoice date",
+          "required": false,
+          "sourceHint": "AP system"
+        }
+      ]
+    },
+    {
+      "id": "ctx-support",
+      "name": "Support",
+      "fields": [
+        {
+          "id": "invoice-attached",
+          "label": "Invoice attached",
+          "required": true,
+          "sourceHint": "AP system"
+        },
+        {
+          "id": "review-status",
+          "label": "Review status",
+          "required": true,
+          "sourceHint": "Close tool"
+        },
+        {
+          "id": "missing-support",
+          "label": "Missing support",
+          "required": true,
+          "sourceHint": "Close tool"
+        },
+        {
+          "id": "reclass-status",
+          "label": "Reclass status",
+          "required": false,
+          "sourceHint": "ERP / GL"
+        }
+      ]
+    },
+    {
+      "id": "ctx-close-status",
+      "name": "Close status",
+      "fields": [
+        {
+          "id": "close-day",
+          "label": "Close day",
+          "required": true,
+          "sourceHint": "Close tool"
+        },
+        {
+          "id": "cfo-package-due",
+          "label": "CFO package due",
+          "required": true,
+          "sourceHint": "Close calendar"
+        },
+        {
+          "id": "owner",
+          "label": "Owner",
+          "required": false,
+          "sourceHint": "Close tool"
+        },
+        {
+          "id": "unresolved-items",
+          "label": "Unresolved items",
+          "required": false,
+          "sourceHint": "Close tool"
+        }
+      ]
+    },
+    {
+      "id": "ctx-thresholds",
+      "name": "Thresholds",
+      "fields": [
+        {
+          "id": "materiality-threshold",
+          "label": "Materiality threshold",
+          "required": true,
+          "sourceHint": "Reference document"
+        },
+        {
+          "id": "capitalization-threshold",
+          "label": "Capitalization threshold",
+          "required": false,
+          "sourceHint": "Reference document"
+        },
+        {
+          "id": "prepaid-review-threshold",
+          "label": "Prepaid review threshold",
+          "required": false,
+          "sourceHint": "Reference document"
+        },
+        {
+          "id": "sensitive-account-threshold",
+          "label": "Sensitive account threshold",
+          "required": false,
+          "sourceHint": "Reference document"
+        }
+      ]
+    }
+  ],
+  "workDocuments": [
+    {
+      "id": "preparer-variance-explanations",
+      "title": "Preparer Variance Explanations",
+      "filePath": "public/samples/meridian/work_to_review/preparer_variance_explanations.md",
+      "reviewItemIds": [
+        "item-office-supplies",
+        "item-marketing",
+        "item-software",
+        "item-inbound-freight",
+        "item-legal"
+      ]
+    },
+    {
+      "id": "march-2026-variance-review-packet",
+      "title": "March 2026 Variance Review Packet",
+      "filePath": "public/samples/meridian/work_to_review/march_2026_variance_review_packet.md",
+      "reviewItemIds": [
+        "item-office-supplies",
+        "item-marketing",
+        "item-software",
+        "item-inbound-freight",
+        "item-legal"
+      ]
+    }
+  ],
+  "reviewItems": [
+    {
+      "id": "item-office-supplies",
+      "title": "Office Supplies variance explanation",
+      "workDocumentId": "preparer-variance-explanations",
+      "sourceWorkDocumentTitle": "Preparer Variance Explanations",
+      "sourceWorkDocumentPath": "public/samples/meridian/work_to_review/preparer_variance_explanations.md",
+      "rubrickId": "meridian-monthly-variance-review",
+      "workType": "Explanations",
+      "account": "6400 Office Supplies",
+      "department": "Design / Admin",
+      "itemText": "Office supplies increased due to new equipment purchases for the design team.",
+      "status": "Open",
+      "supportAttached": true
+    },
+    {
+      "id": "item-marketing",
+      "title": "Marketing & Advertising variance explanation",
+      "workDocumentId": "preparer-variance-explanations",
+      "sourceWorkDocumentTitle": "Preparer Variance Explanations",
+      "sourceWorkDocumentPath": "public/samples/meridian/work_to_review/preparer_variance_explanations.md",
+      "rubrickId": "meridian-monthly-variance-review",
+      "workType": "Explanations",
+      "account": "6200 Marketing & Advertising",
+      "department": "Marketing",
+      "itemText": "Marketing expense was higher than budget due to campaign timing and increased digital spend.",
+      "status": "Open",
+      "supportAttached": true
+    },
+    {
+      "id": "item-software",
+      "title": "Software Subscriptions variance explanation",
+      "workDocumentId": "preparer-variance-explanations",
+      "sourceWorkDocumentTitle": "Preparer Variance Explanations",
+      "sourceWorkDocumentPath": "public/samples/meridian/work_to_review/preparer_variance_explanations.md",
+      "rubrickId": "meridian-monthly-variance-review",
+      "workType": "Explanations",
+      "account": "6600 Software Subscriptions",
+      "department": "Corporate",
+      "itemText": "Software increased due to annual renewal.",
+      "status": "Open",
+      "supportAttached": true
+    },
+    {
+      "id": "item-inbound-freight",
+      "title": "Inbound Freight variance explanation",
+      "workDocumentId": "preparer-variance-explanations",
+      "sourceWorkDocumentTitle": "Preparer Variance Explanations",
+      "sourceWorkDocumentPath": "public/samples/meridian/work_to_review/preparer_variance_explanations.md",
+      "rubrickId": "meridian-monthly-variance-review",
+      "workType": "Explanations",
+      "account": "5100 Inbound Freight",
+      "department": "Operations",
+      "itemText": "Freight increased due to higher shipping volume.",
+      "status": "Open",
+      "supportAttached": true
+    },
+    {
+      "id": "item-legal",
+      "title": "Legal & Professional Fees variance explanation",
+      "workDocumentId": "preparer-variance-explanations",
+      "sourceWorkDocumentTitle": "Preparer Variance Explanations",
+      "sourceWorkDocumentPath": "public/samples/meridian/work_to_review/preparer_variance_explanations.md",
+      "rubrickId": "meridian-monthly-variance-review",
+      "workType": "Explanations",
+      "account": "7100 Legal & Professional Fees",
+      "department": "Corporate",
+      "itemText": "Legal fees increased due to outside counsel invoice.",
+      "status": "Open",
+      "supportAttached": false
+    }
+  ],
+  "reviewContext": {
+    "item-office-supplies": {
+      "companyCloseContext": {
+        "company": "Meridian Apparel, Inc.",
+        "industry": "Apparel retail",
+        "period": "March 2026",
+        "closeDay": "Day 4",
+        "packageStatus": "Draft for Controller review",
+        "cfoPackageDue": "Day 5, 12:00 PM ET"
+      },
+      "currentPeriod": {
+        "marchActual": 24900,
+        "marchBudget": 6500,
+        "varianceDollar": 18400,
+        "variancePercent": 283.1
+      },
+      "priorPeriod": {
+        "februaryActual": 5800
+      },
+      "historicalComparison": {
+        "priorYearMarchActual": 6200
+      },
+      "planning": {
+        "marchForecast": 7000
+      },
+      "thresholds": {
+        "materialityThreshold": "$10,000 or 10%",
+        "capitalizationThreshold": "$2,500"
+      },
+      "transactions": [
+        {
+          "vendor": "Apple Store Business",
+          "description": "MacBook Pros for design team",
+          "amount": 14200,
+          "account": "6400 Office Supplies"
+        },
+        {
+          "vendor": "OfficeHub",
+          "description": "Desk supplies and printer toner",
+          "amount": 2900,
+          "account": "6400 Office Supplies"
+        },
+        {
+          "vendor": "OfficeHub",
+          "description": "Design supplies",
+          "amount": 1800,
+          "account": "6400 Office Supplies"
+        },
+        {
+          "vendor": "PrintPro",
+          "description": "Printer maintenance",
+          "amount": 1000,
+          "account": "6400 Office Supplies"
+        }
+      ],
+      "support": [
+        {
+          "name": "AP invoice detail",
+          "status": "Attached"
+        },
+        {
+          "name": "Apple invoice",
+          "status": "Attached"
+        },
+        {
+          "name": "Fixed asset review",
+          "status": "Not attached"
+        },
+        {
+          "name": "Capitalization conclusion",
+          "status": "Missing"
+        },
+        {
+          "name": "Reclass entry",
+          "status": "Not posted"
+        }
+      ],
+      "contextSourceIds": [
+        "netsuite-march-2026-variance-export",
+        "netsuite-march-2026-transaction-detail",
+        "blackline-march-2026-support-status",
+        "billcom-march-2026-ap-invoice-summary",
+        "march-2026-close-calendar",
+        "fpa-forecast-notes-march-2026",
+        "netsuite-february-2026-variance-export",
+        "netsuite-february-2026-transaction-detail"
+      ]
+    }
+  },
+  "guidanceItems": [
+    {
+      "id": "guidance-office-supplies-capitalization",
+      "rubrickId": "meridian-monthly-variance-review",
+      "title": "Flag equipment purchases coded to Office Supplies",
+      "description": "Durable equipment in Office Supplies may require capitalization review or reclassification.",
+      "sourceType": "expert_review",
+      "sourceName": "Linda Carter review \u2014 Office Supplies variance",
+      "linkedReferenceDocumentIds": [
+        "capitalization-policy",
+        "expense-coding-guide"
+      ],
+      "linkedExampleIds": [
+        "review-office-supplies"
+      ],
+      "linkedWorkItemIds": [
+        "item-office-supplies"
+      ],
+      "createdBy": "Linda Carter",
+      "createdAt": "2026-04-02T14:30:00Z",
+      "status": "Active",
+      "whenApplies": "Use this guidance when Office Supplies includes laptops, monitors, tablets, fixtures, or other durable equipment, especially when material or above the capitalization threshold.",
+      "whatToAskFor": [
+        "invoice detail",
+        "asset description",
+        "amount",
+        "capitalization threshold",
+        "fixed asset review or conclusion",
+        "reclass entry or documented exception"
+      ]
+    },
+    {
+      "id": "guidance-material-variance-threshold",
+      "rubrickId": "meridian-monthly-variance-review",
+      "title": "Review variances above company threshold",
+      "description": "Material variances above $10,000 or 10% should include a clear driver, support, and review status.",
+      "sourceType": "reference",
+      "sourceName": "Month-End Close Checklist",
+      "linkedReferenceDocumentIds": [
+        "month-end-close-checklist",
+        "meridian-accounting-policy"
+      ],
+      "linkedExampleIds": [],
+      "linkedWorkItemIds": [
+        "item-office-supplies",
+        "item-marketing",
+        "item-software",
+        "item-inbound-freight",
+        "item-legal"
+      ],
+      "createdBy": "Finance Controls Team",
+      "createdAt": "2026-04-01T10:00:00Z",
+      "status": "Active"
+    },
+    {
+      "id": "guidance-software-prepaid-review",
+      "rubrickId": "meridian-monthly-variance-review",
+      "title": "Review annual software renewals for prepaid treatment",
+      "description": "Software renewals covering future periods may require prepaid treatment and amortization.",
+      "sourceType": "expert_review",
+      "sourceName": "Linda Carter review \u2014 Software Subscriptions variance",
+      "linkedReferenceDocumentIds": [
+        "prepaid-expense-policy"
+      ],
+      "linkedExampleIds": [
+        "review-software"
+      ],
+      "linkedWorkItemIds": [
+        "item-software"
+      ],
+      "createdBy": "Linda Carter",
+      "createdAt": "2026-04-02T14:45:00Z",
+      "status": "Active"
+    },
+    {
+      "id": "guidance-freight-miscoding",
+      "rubrickId": "meridian-monthly-variance-review",
+      "title": "Flag possible miscoding between inbound and outbound freight",
+      "description": "Customer shipping charges should be reviewed if they appear in inbound freight accounts.",
+      "sourceType": "expert_review",
+      "sourceName": "Linda Carter review \u2014 Inbound Freight variance",
+      "linkedReferenceDocumentIds": [
+        "expense-coding-guide"
+      ],
+      "linkedExampleIds": [
+        "review-inbound-freight"
+      ],
+      "linkedWorkItemIds": [
+        "item-inbound-freight"
+      ],
+      "createdBy": "Linda Carter",
+      "createdAt": "2026-04-02T15:00:00Z",
+      "status": "Active"
+    },
+    {
+      "id": "guidance-sensitive-account-support",
+      "rubrickId": "meridian-monthly-variance-review",
+      "title": "Require support for sensitive account variances",
+      "description": "Sensitive account variances require invoice support and reviewer approval before CFO package submission.",
+      "sourceType": "expert_review",
+      "sourceName": "Linda Carter review \u2014 Legal & Professional Fees variance",
+      "linkedReferenceDocumentIds": [
+        "sensitive-accounts-guidance",
+        "month-end-close-checklist"
+      ],
+      "linkedExampleIds": [
+        "review-legal"
+      ],
+      "linkedWorkItemIds": [
+        "item-legal"
+      ],
+      "createdBy": "Linda Carter",
+      "createdAt": "2026-04-02T15:15:00Z",
+      "status": "Active"
+    },
+    {
+      "id": "guidance-explanation-supported",
+      "rubrickId": "meridian-monthly-variance-review",
+      "title": "Require explanations to tie to supporting detail",
+      "description": "Variance explanations should identify the actual driver and tie to supporting transaction detail or owner-provided support.",
+      "sourceType": "reference",
+      "sourceName": "Month-End Close Checklist",
+      "linkedReferenceDocumentIds": [
+        "month-end-close-checklist"
+      ],
+      "linkedExampleIds": [],
+      "linkedWorkItemIds": [
+        "item-office-supplies",
+        "item-marketing",
+        "item-software",
+        "item-inbound-freight",
+        "item-legal"
+      ],
+      "createdBy": "Finance Controls Team",
+      "createdAt": "2026-04-01T10:05:00Z",
+      "status": "Active"
+    }
+  ],
+  "reviewedExamples": [
+    {
+      "id": "review-office-supplies",
+      "rubrickId": "meridian-monthly-variance-review",
+      "expertId": "linda-carter",
+      "title": "Office Supplies variance explanation",
+      "workItemId": "item-office-supplies",
+      "sourceWorkDocumentTitle": "Preparer Variance Explanations",
+      "contextStatus": "Enough to review",
+      "notices": [
+        "Needs capitalization review",
+        "Not ready for CFO package",
+        "Easy to miss"
+      ],
+      "expertNote": "The explanation is partially true but incomplete. It identifies equipment purchases, but Apple MacBooks may exceed the capitalization threshold and should not remain in Office Supplies without fixed asset review or documented exception.",
+      "referencesUsed": [
+        "capitalization-policy",
+        "expense-coding-guide",
+        "month-end-close-checklist"
+      ],
+      "contextItemsUsed": [
+        "Apple Store Business \u2014 MacBook Pros \u2014 $14,200",
+        "Fixed asset review not attached",
+        "Capitalization conclusion missing"
+      ],
+      "guidanceCreated": [
+        "guidance-office-supplies-capitalization"
+      ],
+      "requiredAction": "Review Apple hardware against the capitalization policy. Reclass to Fixed Assets if needed, or document why expense treatment is acceptable."
+    },
+    {
+      "id": "review-software",
+      "rubrickId": "meridian-monthly-variance-review",
+      "expertId": "linda-carter",
+      "title": "Software Subscriptions variance explanation",
+      "workItemId": "item-software",
+      "sourceWorkDocumentTitle": "Preparer Variance Explanations",
+      "contextStatus": "Enough to review",
+      "notices": [
+        "Needs prepaid review",
+        "Missing support",
+        "Not ready for CFO package"
+      ],
+      "expertNote": "The annual software renewal covers a future benefit period. The variance explanation is directionally correct but incomplete without prepaid analysis or an amortization conclusion.",
+      "referencesUsed": [
+        "prepaid-expense-policy",
+        "month-end-close-checklist"
+      ],
+      "contextItemsUsed": [
+        "DesignCloud Pro annual renewal \u2014 $21,600",
+        "Benefit period Apr 2026-Mar 2027",
+        "Prepaid analysis missing"
+      ],
+      "guidanceCreated": [
+        "guidance-software-prepaid-review"
+      ],
+      "requiredAction": "Prepare prepaid analysis or document exception before CFO package submission."
+    },
+    {
+      "id": "review-inbound-freight",
+      "rubrickId": "meridian-monthly-variance-review",
+      "expertId": "linda-carter",
+      "title": "Inbound Freight variance explanation",
+      "workItemId": "item-inbound-freight",
+      "sourceWorkDocumentTitle": "Preparer Variance Explanations",
+      "contextStatus": "Enough to review",
+      "notices": [
+        "May be miscoded",
+        "Needs follow-up",
+        "Easy to miss"
+      ],
+      "expertNote": "The explanation says shipping volume increased, but transaction detail includes ecommerce customer shipping labels. That activity may belong in outbound shipping rather than inbound freight.",
+      "referencesUsed": [
+        "expense-coding-guide",
+        "month-end-close-checklist"
+      ],
+      "contextItemsUsed": [
+        "ShipFast \u2014 Ecommerce customer shipping labels \u2014 $9,800",
+        "Current account: 5100 Inbound Freight"
+      ],
+      "guidanceCreated": [
+        "guidance-freight-miscoding"
+      ],
+      "requiredAction": "Confirm whether ShipFast charges relate to customer outbound shipping. Reclass if applicable."
+    },
+    {
+      "id": "review-legal",
+      "rubrickId": "meridian-monthly-variance-review",
+      "expertId": "linda-carter",
+      "title": "Legal & Professional Fees variance explanation",
+      "workItemId": "item-legal",
+      "sourceWorkDocumentTitle": "Preparer Variance Explanations",
+      "contextStatus": "Need more context",
+      "notices": [
+        "Needs source",
+        "Sensitive account",
+        "Need more context"
+      ],
+      "expertNote": "Legal is a sensitive account and the explanation references outside counsel, but the invoice is missing. I would not make a final review call without the invoice and sensitive account approval.",
+      "referencesUsed": [
+        "sensitive-accounts-guidance",
+        "month-end-close-checklist"
+      ],
+      "contextItemsUsed": [
+        "Outside counsel invoice missing",
+        "Sensitive account approval missing",
+        "Variance exceeds sensitive account threshold"
+      ],
+      "guidanceCreated": [
+        "guidance-sensitive-account-support"
+      ],
+      "requiredAction": "Request outside counsel invoice and sensitive account approval before including in CFO package."
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+review_item_id,vendor,description,amount,account,department
+item-office-supplies,OfficeHub,Desk supplies and printer toner,3100,6400 Office Supplies,Admin
+item-office-supplies,OfficeHub,Minor design supplies,1700,6400 Office Supplies,Design
+item-office-supplies,PrintPro,Printer maintenance,1000,6400 Office Supplies,Admin

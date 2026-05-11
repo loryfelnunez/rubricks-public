@@ -1,0 +1,20 @@
+review_item_id,support_item,status
+item-office-supplies,AP invoice detail,Attached
+item-office-supplies,Apple invoice,Attached
+item-office-supplies,Fixed asset review,Not attached
+item-office-supplies,Capitalization conclusion,Missing
+item-office-supplies,Reclass entry,Not posted
+item-marketing,AP invoice detail,Attached
+item-marketing,Campaign tracker,Attached
+item-marketing,Cutoff review,Not attached
+item-marketing,Budget owner explanation,Attached
+item-software,AP invoice detail,Attached
+item-software,DesignCloud invoice,Attached
+item-software,Prepaid analysis,Missing
+item-software,Amortization schedule,Not attached
+item-inbound-freight,AP invoice detail,Attached
+item-inbound-freight,Vendor invoice detail,Attached
+item-inbound-freight,Outbound shipping review,Missing
+item-legal,AP invoice detail,Attached
+item-legal,Outside counsel invoice,Missing
+item-legal,Sensitive account approval,Missing

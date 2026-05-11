@@ -1,0 +1,7 @@
+review_item_id,vendor,invoice_number,invoice_date,amount,description,invoice_status
+item-office-supplies,Apple Store Business,ASB-031826,2026-03-18,14200,MacBook Pros for design team,Attached
+item-office-supplies,OfficeHub,OH-030726,2026-03-07,2900,Desk supplies and printer toner,Attached
+item-office-supplies,OfficeHub,OH-031426,2026-03-14,1800,Design supplies,Attached
+item-software,DesignCloud Pro,DCP-032626,2026-03-26,21600,"Annual design software renewal, Apr 2026-Mar 2027",Attached
+item-inbound-freight,ShipFast,SF-032826,2026-03-28,9800,Ecommerce customer shipping labels,Attached
+item-legal,Barton & Vale LLP,BV-032526,2026-03-25,13200,Outside counsel invoice - contract dispute,Missing
