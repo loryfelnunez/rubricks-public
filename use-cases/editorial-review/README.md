@@ -11,29 +11,25 @@ This use case is aimed at documents that need more than basic proofreading. The 
 - surfacing issues such as unsupported claims, ambiguity, tone mismatch, repetition, and structural gaps
 - separating high-confidence edits from cases that need human editor judgment
 
-## Proposed Workflow
+## Structure
 
-The current folder structure supports a simple synthetic evaluation loop built around a concrete sample:
+The use case folder can contain multiple test cases.
 
-- `test-brightcart/review_context/` for audience, product, and research context
-- `test-brightcart/references/` for source materials, style guidance, and review standards
-- `test-brightcart/work_to_review/` for the summary and supporting artifacts under review
-- `test-brightcart/document_index.json` for sample file indexing
-- `test-brightcart/rubrick_mock_data.json` for mock Rubrick data used in the sample
+Each test case lives in its own folder, typically named `test-*`, and contains a specific persona, document set, and review scenario.
 
-## Current Sample
+## Current Tests
 
-The current public sample is **BrightCart — Customer Interview Summary Review**.
+- `test-brightcart/` — Laura Bennett reviews an AI-generated customer interview summary for the BrightCart product context.
 
-It demonstrates a review workflow where a consultant pastes an AI-generated interview summary into Rubricks and checks whether the output is accurate, balanced, evidence-backed, and decision-ready.
+## Typical Test Contents
 
-The sample includes:
+A test folder for this use case may include:
 
-- review context about the product, customer, and interview goal
-- reference materials that define what a strong summary should look like
-- the AI-generated summary to review
-- an original interview excerpt for evidence checking
-- an example of a stronger revised summary direction
+- `references/` for style standards, checklists, or expert seed material
+- `review_context/` for audience, product, research, or assignment context
+- `work_to_review/` for the summary, memo, article, or other drafted output under review
+- `document_index.json` for file indexing and metadata
+- mock Rubrick data for app or demo use
 
 ## Boundary
 

@@ -1,6 +1,6 @@
 # BrightCart — Customer Interview Summary Review
 
-This synthetic sample demonstrates a simple Rubricks use case: reviewing a user-created or AI-generated summary.
+This synthetic sample is a specific test case under the Editorial Review use case: reviewing a user-created or AI-generated summary.
 
 ## Persona
 
@@ -24,7 +24,7 @@ Rubricks evaluates the summary against Laura's Rubrick: **Customer Interview Sum
 ## Folder Structure
 
 ```text
-public/samples/brightcart-summary-review/
+use-cases/editorial-review/test-brightcart/
   references/
   work_to_review/
   review_context/
